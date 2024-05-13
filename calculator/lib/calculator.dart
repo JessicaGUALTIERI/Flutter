@@ -39,7 +39,7 @@ class _CalculatorState extends State<Calculator> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                     Text(
-                    'Vous avez cliqué $_clickCount fois',
+                    'Vous avez cliqué $_clickCount fois.',
                   ),
                 ],
               ),
