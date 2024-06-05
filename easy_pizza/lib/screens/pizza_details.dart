@@ -16,6 +16,24 @@ class PizzaDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          title: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 0.0, horizontal: 10.0),
+                child: Image.asset('images/logo.png', height: 50, width: 50),
+              ),
+              Text(
+                pizza.name,
+                style: const TextStyle(
+                    color: Colors.white,
+                    fontFamily: 'Merriweather',
+                    fontWeight: FontWeight.bold,
+                  ),
+              ),
+          ],) 
+        ),
         body: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

@@ -1,12 +1,19 @@
 import 'package:easy_pizza/models/pizza.dart';
+import 'package:easy_pizza/pizza_liked.dart';
 import 'package:easy_pizza/screens/pizza_details.dart';
 import 'package:easy_pizza/screens/pizzas_master.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:easy_pizza/data/pizzas.dart' as db;
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => PizzaLiked(),
+      child: const MainApp(),
+    ),
+  );
 }
 
 final GoRouter _router = GoRouter(
