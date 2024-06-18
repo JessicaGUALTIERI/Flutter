@@ -4,7 +4,7 @@ import 'dart:collection';
 import 'package:easy_pizza/models/pizza.dart';
 import 'package:flutter/material.dart';
 
-class PizzaLiked extends ChangeNotifier {
+class LikesProvider extends ChangeNotifier {
   final List<Pizza> _pizzaLiked = [];
 
   UnmodifiableListView<Pizza> get pizzasLiked => UnmodifiableListView(_pizzaLiked);
